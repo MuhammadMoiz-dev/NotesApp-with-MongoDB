@@ -118,7 +118,7 @@ const authMiddleware = (req, res, next) => {
 };
 
 // ------------------ GET LOGGED USER ------------------
-app.get("/me", authMiddleware, async (req, res) => {
+app.get("me", authMiddleware, async (req, res) => {
   const user = await UserModel.findById(req.user.userId).select("-Password");
   res.json({ user });
 });
