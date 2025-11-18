@@ -19,7 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
     origin: [
-        "https://notes-app-with-mongo-db-ccnn-e2brltg1p.vercel.app", // your frontend
+        "notes-app-with-mongo-db-ccnn-e2brltg1p.vercel.app",
+        "notes-app-with-mong-git-001cb3-muhammad-moizs-projects-89d7cc44.vercel.app",
         "http://localhost:5173"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
