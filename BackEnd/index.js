@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: "https://notes-app-with-mongo-db-ccnn.vercel.app/", // your frontend URL
+        origin: "https://notes-app-with-mongo-db-ccnn.vercel.app", // your frontend URL
         credentials: true,               // allow sending cookies
     })
 );
