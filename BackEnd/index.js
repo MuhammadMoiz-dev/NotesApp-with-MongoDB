@@ -17,12 +17,14 @@ const app = express();
 // 🧩 Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-    cors({
-        origin: "https://notes-app-with-mongo-db-ccnn.vercel.app", // your frontend URL
-        credentials: true,               // allow sending cookies
-    })
-);
+app.use(cors({
+    origin: [
+        "https://notes-app-with-mongo-db-ccnn-e2brltg1p.vercel.app", // your frontend
+        "http://localhost:5173"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 connnectDB()
 
 // 🏠 Test route
