@@ -1,17 +1,14 @@
 import mongoose from "mongoose";
 
-
-
 async function connnectDB() {
-    try {
-
-        await mongoose.connect(process.env.DB_URL)
-        console.log('Connect DB');
-
-    } catch (error) {
-        console.log(error);
-
-    }
+  try {
+    await mongoose.connect(process.env.DB_URL, {
+      serverSelectionTimeoutMS: 5000,
+    });
+    console.log("MongoDB Connected");
+  } catch (error) {
+    console.error("MongoDB Connection Error:", error.message);
+  }
 }
 
 export default connnectDB;
